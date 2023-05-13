@@ -7,7 +7,7 @@
 </div>
 
 ### Descripción
-Este curso es sobre tipado avanzado al lenguaje de programación TypeScript. Este es la segunda parte de un conjunto de 3 cursos sobre TypeScript:
+Este curso es sobre Programacion orientada a objetos en TypeScript. Este es la Tercera parte de un conjunto de 3 cursos sobre TypeScript:
   - Introducción
   - Tipos Avanzados y Funciones
   - --> Programación Orientada a Objetos.
