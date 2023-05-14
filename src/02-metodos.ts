@@ -4,14 +4,14 @@ class MyDate {
   year: number; // <-- Atributos
   month: number;
   day: number;
-  // Asignar los parametros del constructor a las propiedades de la clase
+  // Asignar los parametros del constructor a las atributos de la clase
   constructor(year: number, month: number, day: number) {
     this.year = year;
     this.month = month;
     this.day = day;
   };
 
-  // Metodos de la clase - Tienen la apariencia de una funcion
+  // Metodos de la clase - Tienen la apariencia de una funcion simple
   printFormat():string{
     return `${this.day}/${this.month}/${this.year}`;
   };
