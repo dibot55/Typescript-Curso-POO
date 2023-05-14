@@ -30,7 +30,7 @@ class MyDatePublic {
 };
 
 // Instancias
-const myNewDatepublic = new MyDate(1993, 7, 9);
+const myNewDatepublic = new MyDatePublic(1993, 7, 9);
 console.log(myNewDatepublic.printFormat());
 
 myNewDatepublic.add(7, "days");
