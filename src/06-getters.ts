@@ -2,10 +2,10 @@
 
 class MyDateGetters {
 
-  // Constructor - Manera correcta de asignar atributos en TS.
+  // Constructor
   constructor(
     private year: number = 0,
-    private month: number= 0, // <-- Le definios valores por defecto
+    private month: number= 0,
     private day: number = 0
     ) {
 
@@ -28,7 +28,6 @@ class MyDateGetters {
     }
   };
 
-  // Este metodo solo se usa dentro de la clase.
   private addPadding(value: number):string{
     if(value < 10){
       return `0${value}`;
