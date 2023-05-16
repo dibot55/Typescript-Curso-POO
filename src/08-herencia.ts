@@ -1,4 +1,4 @@
-// Herencia - extender clases
+// Herencia - Los atributos y metodos son heredados de una clase a otra para evitar redundancia de codigo. Los metodos son accedidos por defecto con un "extends" y los atributos con un super(nombre_del_atributo).
 
 export class Animal {
   constructor(public nombre: string) {
@@ -24,14 +24,14 @@ const dog = new Animal("Hachi");
 console.log(dog.saludar());
 dog.comer();
 
-// Herencia - extends
+// Herencia - extends{}
 export class Perro extends Animal {
   // Extendiendo Atributos
   constructor(
     nombre:string, // <-- NO de le define un alcance por que estariamos doblando el atributo
     public especie: string
     ) {
-    super(nombre); // Pasamos el atributo "nombre" al constructor de la clase padre
+    super(nombre); // Desde la clase hija llamamos al constructor de la clase padre para traer el atributo "nombre"
     };
 
   // Extendiendo Metodos
