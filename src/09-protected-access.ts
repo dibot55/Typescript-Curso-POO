@@ -1,6 +1,6 @@
 // Acceso Protegido - Forma de proteger los atributos y metodos en clases heredadas.
 
-export class AnimalProtected {
+export abstract class AnimalProtected {
   // Atributo protegido
   constructor(
     protected nombre: string
@@ -26,11 +26,6 @@ export class AnimalProtected {
   };
 };
 
-// Instancia de la clase padre
-const dog = new AnimalProtected("Hachi");
-console.log(dog.saludar());
-dog.comer();
-
 // Herencia
 export class Perro extends AnimalProtected {
 
@@ -41,14 +36,14 @@ export class Perro extends AnimalProtected {
     super(nombre);
     };
 
-  // Metodo consumiento un atributo protegido
+  // Metodo consumiendo un atributo protegido
   public ladrar(times: number){
     for (let index = 0; index < times; index++){
       console.log(`woof ${this.nombre}`); // <-- Si pones el atributo "nombre" private en la clase padre tampoco puedes modificarlo en una clase hija. Pero con Protected si podemos
     };
   };
 
-  // Metodo consumiento un metetodo protegido de la clase padre
+  // Metodo consumiendo un metodo protegido de la clase padre
   public quito(){
     return this.doSometing();
   };
