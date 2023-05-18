@@ -12,4 +12,4 @@ Este curso es sobre Programacion orientada a objetos en TypeScript. Este es la T
   - Tipos Avanzados y Funciones
   - --> Programación Orientada a Objetos.
 <br>
-En este repositorio solo estan almacenadas mis practicas en el lenguaje Typescript sobre programacion orientada a objetos.
+En este repositorio solo estan almacenadas mis practicas en el lenguaje Typescript sobre programacion orientada a objetos, uso del asincronismo y manejo de genericos.
