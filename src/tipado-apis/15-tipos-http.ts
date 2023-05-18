@@ -1,3 +1,4 @@
+// Conexión a la API
 // Tipando respuestas http de una API
 import axios from "axios";
 
