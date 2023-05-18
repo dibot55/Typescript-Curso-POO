@@ -7,7 +7,7 @@ export class ProductMemoryService{
   // Atributos
   private productArray: Product[] = [];
 
-  // Metodos
+  // Metodos CRUD
 
   // Create
     create(data: CreatedProductDto): Product{
@@ -21,23 +21,26 @@ export class ProductMemoryService{
         image: faker.image.imageUrl()
       }
     };
-    // this.productArray.push(newProduct);
-    // return newProduct;
     return this.add(newProduct);
   };
   // Add new product
-  add(product: Product){
+  private add(product: Product){
     this.productArray.push(product);
     return product;
   };
 
+  // Read
+  getAll(){
+    return this.productArray;
+  };
+
   // Update
-  updateProduct = (id: Product["id"], changes: UpdateProductDto): Product => {
-    const index = this.productArray.findIndex((item) => {item.id === id});
-    const product = this.productArray[index];
+  update (id: Product["id"], changes: UpdateProductDto): Product {
+    const index = this.productArray.findIndex(item => item.id === id);
+    const prevData = this.productArray[index];
     // Actualización
     this.productArray[index] = {
-      ...product, // Elementos actuales
+      ...prevData, // Elementos actuales
       ...changes // Elementos Nuevos
     };
     return this.productArray[index];
@@ -47,4 +50,5 @@ export class ProductMemoryService{
   findOne(id: Product["id"]){
     return this.productArray.find(item => item.id === id)
   };
+
 };
