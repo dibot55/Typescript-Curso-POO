@@ -14,17 +14,21 @@ export class ProductHttpService implements Crud{
     return conexion.data;
   };
 
+  // Create
   async create(data: CreatedProductDto): Promise<Product> {
-    const conexion = await axios.post(this._url, data);
+    const conexion = await axios.post<Product>(this._url, data);
     return conexion.data;
   };
 
+  // UPDATE
   async update(id: Product["id"], changes: UpdateProductDto): Promise<Product> {
-    const conexion = await axios.put(`${this._url}/${id}`, changes); // api.com/api + / + id
+    const conexion = await axios.put<Product>(`${this._url}/${id}`, changes); // api.com/api + / + id
     return conexion.data;
   };
+
+  // FINDBYID
   async findOne(id: Product["id"]): Promise<Product | undefined>{
-    const conexion = await axios.get(`${this._url}/${id}`); // api.com/api + / + id
+    const conexion = await axios.get<Product | undefined>(`${this._url}/${id}`);//api.com/api + / + id
     return conexion.data;
   }
 
