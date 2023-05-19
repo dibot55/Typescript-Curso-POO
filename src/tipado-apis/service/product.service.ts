@@ -2,8 +2,9 @@
 import { Product } from "./../models/product.models";
 import { CreatedProductDto, UpdateProductDto } from "../dtos/products.dtos";
 import { faker } from "@faker-js/faker";
+import { Crud } from "../../driver/driver";
 
-export class ProductMemoryService{
+export class ProductMemoryService implements Crud{
   // Atributos
   private productArray: Product[] = [];
 
