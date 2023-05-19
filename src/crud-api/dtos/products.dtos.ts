@@ -7,6 +7,9 @@ import { Category } from "../models/category.model";
 export interface CreatedProductDto extends Omit<Product, "id" | "category"> {
   categoryId: Category["id"]; // Acceder al tipado por un indice
 };
+export interface CreateCategoryDto extends Omit<Category, "id">{};
 
 // Partial - Vuelve opcional a todos las propiedades de la interfaz
 export interface UpdateProductDto extends Partial<CreatedProductDto> {};
+
+export interface UpdateCategoryDto extends Partial<CreateCategoryDto>{};
