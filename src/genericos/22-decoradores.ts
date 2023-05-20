@@ -39,3 +39,16 @@ export class Post {
   @IsDate()
   createDate!: Date;
 }
+// Validar decoradores
+(async()=>{
+  try {
+    const dto = new Post();
+    dto.title = "s",
+    dto.createDate = new Date();
+    dto.email= "dibot@asdasd.com"
+    await validateOrReject(dto);
+
+  } catch (error) {
+    console.log(error);
+  }
+})()
