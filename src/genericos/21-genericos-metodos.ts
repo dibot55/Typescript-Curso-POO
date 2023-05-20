@@ -7,7 +7,7 @@ import { UpdateCategoryDto, UpdateProductDto } from "../crud-api/dtos/products.d
 export class GenericClass<T> {
 
   constructor(
-    private url: string
+    protected url: string
   ){};
 
   // READ
